@@ -54,8 +54,9 @@ const IMC: React.FC<IMCProps> = () => {
       <h2>Calculadora de IMC</h2>
       <form className="imc-form" onSubmit={calcularIMC}>
         <div className="input-group">
-          <label>Peso (kg):</label>
+          <label htmlFor="peso">Peso (kg):</label>
           <input
+            id='peso'
             type="number"
             step="0.1"
             value={peso}
@@ -65,8 +66,13 @@ const IMC: React.FC<IMCProps> = () => {
           />
         </div>
         <div className="input-group">
-          <label>Altura (m):</label>
+          {/* CORREÇÃO AQUI: 
+            Alterado de "Altura" para "altura" (minúsculo) 
+            para corresponder ao id="altura" do input.
+          */}
+          <label htmlFor="altura">Altura (m):</label>
           <input
+            id='altura'
             type="number"
             step="0.01"
             value={altura}
