@@ -28,7 +28,6 @@ const IMC: React.FC<IMCProps> = () => {
       return;
     }
 
-    // Cálculo do IMC
     const imc = pesoNum / (alturaNum * alturaNum);
     let classificacao = '';
 
@@ -66,10 +65,6 @@ const IMC: React.FC<IMCProps> = () => {
           />
         </div>
         <div className="input-group">
-          {/* CORREÇÃO AQUI: 
-            Alterado de "Altura" para "altura" (minúsculo) 
-            para corresponder ao id="altura" do input.
-          */}
           <label htmlFor="altura">Altura (m):</label>
           <input
             id='altura'
